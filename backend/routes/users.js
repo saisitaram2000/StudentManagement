@@ -9,12 +9,40 @@ const con=mysql.createConnection({
   user: "root",
   database: 'StudentsData'
 });
-con.query('SELECT * FROM students',(err,rows)=>{
-  if(err)throw err;
-  console.log('connection established');
-  console.log(rows);
-});
 
+const addData=async(data){
+  try{
+    console.log(data.FullName);
+    var keys='(FullName,10th_Grade,IntermediateMarks,MainsRank,JEEAdvanceRank,ContactNo)';
+    var newData="('"+data.FullName+"','"+data.10th_Grade+"','"+data.IntermediateMarks+"','"+data.MainsRank+"','"+data.JEEAdvanceRank+"','"+data.ContactNo+"')";
+    var sql_new = "INSERT INTO StudentsData "+keys+" VALUES "+newdata+";";
+   con.query(sql_new,function(err,result){
+     if(err) throw err;
+     console.log("new record inserted");
+   });
+}catch(error){
+  console.log(error);
+}
+}
+router.post('/',function(res,req,next){
+  console.log(req.body.StudentID);
+  console.log("in studentadd");
+	addData(req.body);
+	res.send("done");
+})
+router.get('/:studentid',function(res,req,next){
+  var tempID=url.parse(req.url,true);
+  ID=tempID.pathname.substring(1);
+  console.log(ID);
+  con.query("SELECT * FROM Students WHERE StudentID='"+ID+"'",function(err,result,fields){
+    if(err){
+      res.send('Error occured');
+      throw err;
+    }
+    console.log(result);
+    res.json(result);
+  })
+})
 router.get('/', function(req, res, next) {
  // res.send('respond with a resource');
   con.query("SELECT * FROM Students",function(err,result,fields){

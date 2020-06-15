@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./student.css";
 const axios = require('axios').default;
 export default class UserData extends Component{
     constructor(props){
@@ -9,8 +10,7 @@ export default class UserData extends Component{
             intermarks:'',
             mains:'',
             advance:'',
-            contact:'',
-            address:''
+            contact:''
         };
         this.handleInputChange=this.handleInputChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
@@ -23,6 +23,20 @@ export default class UserData extends Component{
     handleSubmit= (event) =>{
         event.preventDefault();
         alert('response submitted successfully');
+        axios.post('http://localhost:4000/api/student/',{
+            fullname:this.state.fullname,
+            tenth_grade:this.state.tenth_grade,
+            intermarks:this.state.intermarks,
+            mains:this.state.mains,
+            advance:this.state.advance,
+            contact:this.state.contact
+        })
+        .then(function(){
+            console.log(response);
+        })
+        .catch(function(){
+            console.log(error);
+        })
     }
 
     render(){
@@ -62,12 +76,6 @@ export default class UserData extends Component{
                <label>
                     ContactNo:
                     <input name="contact" type="text" value={this.state.contact} onChange={this.handleInputChange}/>
-               </label>
-               <br />
-               <br />
-               <label>
-                    Address:
-                    <input name="address" type="text" value={this.state.address} onChange={this.handleInputChange}/>
                </label>
                <br />
                <br />
