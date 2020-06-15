@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import "./student.css"
 const axios=require('axios').default;
 
-export default class StudentData extend Component{
+export default class StudentData extends Component{
 
     constructor(props){
         super(props);
@@ -30,37 +30,37 @@ export default class StudentData extend Component{
                     <p>this.state.FullName</p>
                </label>
                <br />
-               <br />
+               
                <label>
                     10th_Grade:
                     <p>this.state.10th_Grade</p>
                </label>
                <br />
-               <br />
+              
                <label>
                     IntermediateMarks:
                     <p>this.state.IntermediateMarks</p>
                </label>
                <br />
-               <br />
+               
                <label>
                     MainsRank:
                     <p>this.state.MainsRank</p>
                </label>
                <br />
-               <br />
+             
                <label>
                     JEEAdvanceRank:
                     <p>this.state.JEEAdvanceRank</p>
                </label>
                <br />
-               <br />
+             
                <label>
                     ContactNo:
                     <p>this.state.ContactNo</p>
                </label>
                <br />
-               <br />
+              
             </form>
         )
     }

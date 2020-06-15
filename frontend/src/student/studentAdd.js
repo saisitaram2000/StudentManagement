@@ -31,12 +31,12 @@ export default class UserData extends Component{
             advance:this.state.advance,
             contact:this.state.contact
         })
-        .then(function(){
+        .then(function(response){
             console.log(response);
         })
-        .catch(function(){
+        .catch(function(error){
             console.log(error);
-        })
+        });
     }
 
     render(){
