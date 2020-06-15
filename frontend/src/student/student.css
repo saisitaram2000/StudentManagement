@@ -31,3 +31,8 @@ input,textarea{
     padding-left: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.submit{
+    color:rgb(43, 134, 209);
+    font-weight: bold;
+    display: inline-block;
+}

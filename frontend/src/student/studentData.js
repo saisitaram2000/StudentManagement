@@ -27,37 +27,37 @@ export default class StudentData extends Component{
             <h1>Hey you got your Details!</h1>
                 <label>
                     FullName:
-                    <p>this.state.FullName</p>
+                    <p>{this.state.FullName}</p>
                </label>
                <br />
                
                <label>
                     10th_Grade:
-                    <p>this.state.10th_Grade</p>
+                    <p>{this.state.Tenth_Grade}</p>
                </label>
                <br />
               
                <label>
                     IntermediateMarks:
-                    <p>this.state.IntermediateMarks</p>
+                    <p>{this.state.IntermediateMarks}</p>
                </label>
                <br />
                
                <label>
                     MainsRank:
-                    <p>this.state.MainsRank</p>
+                    <p>{this.state.MainsRank}</p>
                </label>
                <br />
              
                <label>
                     JEEAdvanceRank:
-                    <p>this.state.JEEAdvanceRank</p>
+                    <p>{this.state.JEEAdvanceRank}</p>
                </label>
                <br />
              
                <label>
                     ContactNo:
-                    <p>this.state.ContactNo</p>
+                    <p>{this.state.ContactNo}</p>
                </label>
                <br />
               

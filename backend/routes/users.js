@@ -10,11 +10,11 @@ const con=mysql.createConnection({
   database: 'StudentsData'
 });
 
-const addData=async(data){
+const addData=async(data)=>{
   try{
     console.log(data.FullName);
-    var keys='(FullName,10th_Grade,IntermediateMarks,MainsRank,JEEAdvanceRank,ContactNo)';
-    var newData="('"+data.FullName+"','"+data.10th_Grade+"','"+data.IntermediateMarks+"','"+data.MainsRank+"','"+data.JEEAdvanceRank+"','"+data.ContactNo+"')";
+    var keys='(FullName,Tenth_Grade,IntermediateMarks,MainsRank,JEEAdvanceRank,ContactNo)';
+    var newData="('"+data.FullName+"','"+data.Tenth_Grade+"','"+data.IntermediateMarks+"','"+data.MainsRank+"','"+data.JEEAdvanceRank+"','"+data.ContactNo+"')";
     var sql_new = "INSERT INTO StudentsData "+keys+" VALUES "+newdata+";";
    con.query(sql_new,function(err,result){
      if(err) throw err;

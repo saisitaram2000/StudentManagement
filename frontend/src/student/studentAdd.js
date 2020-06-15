@@ -50,7 +50,7 @@ export default class UserData extends Component{
                <br />
                <br />
                <label>
-                    10th_Grade:
+                    Tenth_Grade:
                     <input name="tenth_grade" type="number" step="any" value={this.state.tenth_grade} onChange={this.handleInputChange}/>
                </label>
                <br />
@@ -79,7 +79,7 @@ export default class UserData extends Component{
                </label>
                <br />
                <br />
-               <input type="submit" onClick={this.handleSubmit}/>
+               <input type="submit" className="submit" onClick={this.handleSubmit}/>
             </form>
         );
     }
