@@ -13,7 +13,7 @@ export default class StudentsList extends Component{
         setTimeout(function() { //Start the timer
          this.setState({render: true}) //After 1 second, set render to true
      }.bind(this), 1000)
-       const res =await axios.get('http://localhost:4000/api/student')
+       const res =await axios.get('http://localhost:4000/student')
        this.state.data=await res.data;
      }
      render () {

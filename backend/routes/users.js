@@ -14,7 +14,7 @@ const addData=async(data)=>{
   try{
     console.log(data.FullName);
     var keys='(FullName,Tenth_Grade,IntermediateMarks,MainsRank,JEEAdvanceRank,ContactNo)';
-    var newData="('"+data.FullName+"','"+data.Tenth_Grade+"','"+data.IntermediateMarks+"','"+data.MainsRank+"','"+data.JEEAdvanceRank+"','"+data.ContactNo+"')";
+    var newdata="('"+data.FullName+"','"+data.Tenth_Grade+"','"+data.IntermediateMarks+"','"+data.MainsRank+"','"+data.JEEAdvanceRank+"','"+data.ContactNo+"')";
     var sql_new = "INSERT INTO StudentsData "+keys+" VALUES "+newdata+";";
    con.query(sql_new,function(err,result){
      if(err) throw err;
@@ -25,6 +25,7 @@ const addData=async(data)=>{
 }
 }
 router.post('/',function(res,req,next){
+  res.statusCode(200).send("hi");
   console.log(req.body.StudentID);
   console.log("in studentadd");
 	addData(req.body);

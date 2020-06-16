@@ -12,13 +12,13 @@ export default class StudentData extends Component{
     }
 
     async componentDidMount(){
-        const path=window.location.pathname.substring(8);
+        const path=window.location.pathname.substring(10);
         console.log(path);
         setTimeout(function(){
             this.setState({render:true});
         }.bind(this),1000);
 
-        const res=await axios.get('http://localhost:4000/api/student/'+path);
+        const res=await axios.get('http://localhost:4000/student/'+path);
         this.state.data=res.data;
     }
     render(){

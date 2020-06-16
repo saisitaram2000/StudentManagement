@@ -23,7 +23,7 @@ export default class UserData extends Component{
     handleSubmit= (event) =>{
         event.preventDefault();
         alert('response submitted successfully');
-        axios.post('http://localhost:4000/api/student/',{
+        axios.post('http://localhost:4000/student',{
             fullname:this.state.fullname,
             tenth_grade:this.state.tenth_grade,
             intermarks:this.state.intermarks,
@@ -37,12 +37,24 @@ export default class UserData extends Component{
         .catch(function(error){
             console.log(error);
         });
+        this.setState({
+            fullname:'',
+            tenth_grade:'',
+            intermarks:'',
+            mains:'',
+            advance:'',
+            contact:''
+        });
     }
 
     render(){
         return(
+            <div className="App">
+            <center>
+                <h1>Enter the Data fields below</h1>
+            </center>
             <form>
-            <h1>Enter the Data fields below</h1>
+            <h2>STUDENT FORM</h2>
                 <label>
                     FullName:
                     <input name="fullname" type="text" value={this.state.fullname} onChange={this.handleInputChange}/>
@@ -81,6 +93,7 @@ export default class UserData extends Component{
                <br />
                <input type="submit" className="submit" onClick={this.handleSubmit}/>
             </form>
+            </div>
         );
     }
 }
