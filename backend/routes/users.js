@@ -25,7 +25,7 @@ const addData=async(data)=>{
 }
 }
 router.post('/',function(res,req,next){
-  res.statusCode(200).send("hi");
+ // res.statusCode(200).send("hi");
   console.log(req.body.StudentID);
   console.log("in studentadd");
 	addData(req.body);
