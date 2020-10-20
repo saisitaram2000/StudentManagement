@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
 import studentAdd from './student/studentAdd';
 import studentData from './student/studentData';
-import studentList from './student/studentsList';
+import studentsList from './student/studentsList';
 import home from './student/home';
 import NotFound from './student/404';
 
@@ -28,7 +28,7 @@ function App() {
         <Switch>
         <Route exact path="/" component={home}/>
         <Route exact path="/add" component={studentAdd} />
-        <Route exact path="/student" component={studentList} />
+        <Route exact path="/student" component={studentsList} />
         <Route exact path="/:studentid" component={studentData} />
         <Route path="*" component={NotFound} /> 
         </Switch>

@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var url = require('url');
+
 /* GET users listing. */
+
 const mysql=require('mysql');
+
 
 const con=mysql.createConnection({
   host: "localhost",
@@ -27,13 +30,13 @@ const addData=async(data)=>{
   console.log(error);
 }
 }
-router.post('',function(res,req,next){
+router.post('/',function(res,req,next){
   //res.statusCode(200).send("hi");
   console.log('hi');
   //  console.log(req.body.StudentID);
   //  console.log("in studentadd");
 	//  addData(req.body);
-	// res.send("done");
+	 res.send("done");
 })
 router.get('/:studentid',function(res,req,next){
   // var tempID=url.parse(req.url,true);
