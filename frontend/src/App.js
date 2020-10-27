@@ -26,10 +26,10 @@ function App() {
         </ul>
         <hr />
         <Switch>
-        <Route exact path="" component={home}/>
-        <Route exact path="add" component={studentAdd} />
-        <Route exact path="student" component={studentsList} />
-        <Route exact path=":studentid" component={studentData} />
+        <Route exact path="/" component={home}/>
+        <Route exact path="/add" component={studentAdd} />
+        <Route exact path="/student" component={studentsList} />
+        <Route exact path="/:studentid" component={studentData} />
         <Route path="*" component={NotFound} /> 
         </Switch>
       </div>
