@@ -13,16 +13,16 @@ export default class studentData extends Component{
     }
 
     async componentDidMount(){
-        const path=window.location.pathname.substring(1);
         setTimeout(function(){
             this.setState({render:true});
         }.bind(this),1000);
 
-        const res=await axios.get(process.env.REACT_APP_BACKEND_HOST+'/users/'+path);
+        const res=await axios.get(process.env.REACT_APP_BACKEND_HOST+'/users/'+this.props.match.params.studentid);
        
         this.setState({data:res.data[0]});
     }
     render(){
+        //console.log(this.props.match.params.studentid);
         return(
             
           <div className="flex-container">

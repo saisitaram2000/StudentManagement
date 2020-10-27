@@ -22,7 +22,7 @@ export default class studentsList extends Component{
         return (
           this.state.data.map((stud)=>(
             <div className="studentlist" key={stud.StudentID}>
-              <a href={"http://localhost:3000/"+stud.StudentID} className="studentlistitem">{stud.StudentID+'. '+stud.FullName}</a>
+              <a href={window.location.host+process.env.REACT_APP_GITHUB_REPONAME+'/'+stud.StudentID} className="studentlistitem">{stud.StudentID+'. '+stud.FullName}</a>
             </div>
           ))
         )
