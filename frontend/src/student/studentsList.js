@@ -19,10 +19,11 @@ export default class studentsList extends Component{
        this.state.data=await res.data;
      }
      render () {
+       console.log(window.location);
         return (
           this.state.data.map((stud)=>(
             <div className="studentlist" key={stud.StudentID}>
-              <a href={window.location.host+process.env.REACT_APP_GITHUB_REPONAME+'/'+stud.StudentID} className="studentlistitem">{stud.StudentID+'. '+stud.FullName}</a>
+              <a href={window.location.origin+process.env.REACT_APP_GITHUB_REPONAME+'/'+stud.StudentID} className="studentlistitem">{stud.StudentID+'. '+stud.FullName}</a>
             </div>
           ))
         )
