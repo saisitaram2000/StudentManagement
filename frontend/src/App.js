@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div>
-      <h1>STUDENT DATA MANAGEMENT SYSTEM</h1>
+      <h1>STUDENT DATA MANAGEMENT SYSTEMS</h1>
         <ul>
           <li>
             <Link to={`${process.env.REACT_APP_GITHUB_REPONAME}/`}>Home</Link>
@@ -28,7 +28,7 @@ function App() {
         <hr />
         <Switch>
         <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/`} component={home}/>
-        <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/add`} component={studentAdd} />
+        <Route exact path="/add" component={studentAdd} />
         <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/student`} component={studentsList} />
         <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/:studentid`} component={studentData} />
         <Route path="*" component={NotFound} /> 
