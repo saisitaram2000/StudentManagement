@@ -1,5 +1,5 @@
 form{
-    background-color: black;
+    background-color: crimson;
     width: 500px;
     border-radius: 25px;
     height: 650px;
@@ -42,3 +42,33 @@ input,textarea{
     margin-right: 230px;
     
 }
+
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    height: 500px;
+    margin-left: 30%;
+    background-color: crimson;
+    justify-content: center;
+    align-items: center;
+}
+.flex-item{
+    display:flex;
+    flex-direction: row;
+     text-align: center;
+   /* justify-content: center;
+    align-items: center; */
+}
+/* .flex-item{
+    width: 100%;
+} */
+/* .item1{
+    width: 50%;
+    float: right;
+}
+.item2{
+    margin-left: 60%;
+    width:50%;
+    float: left;
+} */
