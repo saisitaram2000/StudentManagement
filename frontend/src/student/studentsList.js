@@ -13,14 +13,14 @@ export default class studentsList extends Component{
         setTimeout(function() { //Start the timer
          this.setState({render: true}) //After 1 second, set render to true
      }.bind(this), 1000)
-       const res =await axios.get('http://localhost:4000/')
+       const res =await axios.get('http://localhost:5000/users')
        this.state.data=await res.data;
      }
      render () {
         return (
           this.state.data.map((stud)=>(
-            <div class=" studentlist">
-              <a href={"users/"+stud.StudentID} class="studentlistitem">{stud.StudentID+'. '+stud.FullName}</a>
+            <div className="studentlist">
+              <a href={"http://localhost:3000/"+stud.StudentID} className="studentlistitem">{stud.StudentID+'. '+stud.FullName}</a>
             </div>
           ))
         )

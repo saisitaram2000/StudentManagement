@@ -22,8 +22,7 @@ export default class studentAdd extends Component{
     }
     handleSubmit= (event) =>{
         event.preventDefault();
-        alert('response submitted successfully');
-        axios.post('http://localhost:4000/',{
+        axios.post('http://localhost:5000/users/',{
             fullname:this.state.fullname,
             tenth_grade:this.state.tenth_grade,
             intermarks:this.state.intermarks,
@@ -37,7 +36,6 @@ export default class studentAdd extends Component{
         .catch(function(error){
             console.log(error);
         });
-        alert("done succesfully");
         this.setState({
             fullname:'',
             tenth_grade:'',
