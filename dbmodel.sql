@@ -1,0 +1,37 @@
+
+
+DROP TABLE IF EXISTS "Students";
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "Students" (
+  "StudentID" int(11) NOT NULL AUTO_INCREMENT,
+  "FullName" varchar(255) NOT NULL,
+  "Tenth_Grade" float NOT NULL,
+  "IntermediateMarks" int(11) DEFAULT NULL,
+  "MainsRank" int(11) DEFAULT NULL,
+  "JEEAdvanceRank" int(11) DEFAULT NULL,
+  "ContactNo" varchar(255) NOT NULL,
+  PRIMARY KEY ("StudentID")
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "Students"
+--
+
+LOCK TABLES "Students" WRITE;
+/*!40000 ALTER TABLE "Students" DISABLE KEYS */;
+INSERT INTO "Students" VALUES (4,"sita",9.7,960,8500,8900,"(+91)7993489120"),(5,"sai",9.8,953,9068,8796,"9988776655"),(6,"HARSHA",9.5,978,7896,6500,"7885634251");
+/*!40000 ALTER TABLE "Students" ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-10-27 16:53:05

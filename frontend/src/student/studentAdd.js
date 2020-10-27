@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./student.css";
 const axios = require('axios').default;
+const dotenv = require('dotenv');
+dotenv.config();
 export default class studentAdd extends Component{
     constructor(props){
         super(props);
@@ -22,7 +24,7 @@ export default class studentAdd extends Component{
     }
     handleSubmit= (event) =>{
         event.preventDefault();
-        axios.post('http://localhost:5000/users/',{
+        axios.post(process.env.REACT_APP_BACKEND_HOST+'/users/',{
             fullname:this.state.fullname,
             tenth_grade:this.state.tenth_grade,
             intermarks:this.state.intermarks,

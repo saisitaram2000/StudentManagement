@@ -1,16 +1,18 @@
 var express = require('express');
 var router = express.Router();
 var url = require('url');
-
+const dotenv = require('dotenv');
+dotenv.config();
 /* GET users listing. */
 
 const mysql=require('mysql');
 
 
 const con=mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: 'StudentsData'
+  host: process.env.SQL_HOST,
+  user: process.env.SQL_USER,
+  database: process.env.SQL_DB,
+  password: process.env.SQL_PASSWORD
 });
 
 const addData=async(data)=>{

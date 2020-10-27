@@ -1,13 +1,14 @@
 import React,{Component} from 'react';
 import "./student.css"
 const axios=require('axios').default;
-
+const dotenv = require('dotenv');
+dotenv.config();
 export default class studentData extends Component{
 
     constructor(props){
         super(props);
         this.state={
-            data:[]
+            data:{}
         };
     }
 
@@ -17,7 +18,7 @@ export default class studentData extends Component{
             this.setState({render:true});
         }.bind(this),1000);
 
-        const res=await axios.get('http://localhost:5000/users/'+path);
+        const res=await axios.get(process.env.REACT_APP_BACKEND_HOST+'/users/'+path);
        
         this.setState({data:res.data[0]});
     }
