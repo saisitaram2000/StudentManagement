@@ -9,27 +9,28 @@ import home from './student/home';
 import NotFound from './student/404';
 
 function App() {
+  console.log(process.env.REACT_APP_GITHUB_REPONAME);
   return (
     <Router>
       <div>
       <h1>STUDENT DATA MANAGEMENT SYSTEM</h1>
         <ul>
           <li>
-            <Link to="">Home</Link>
+            <Link to={`${process.env.REACT_APP_GITHUB_REPONAME}/`}>Home</Link>
           </li>
           <li>
-            <Link to="add">AddStudent</Link>
+            <Link to={`${process.env.REACT_APP_GITHUB_REPONAME}/add`}>AddStudent</Link>
           </li>
           <li>
-            <Link to="student">List all Students</Link>
+            <Link to={`${process.env.REACT_APP_GITHUB_REPONAME}/student`}>List all Students</Link>
           </li>
         </ul>
         <hr />
         <Switch>
-        <Route exact path="/" component={home}/>
-        <Route exact path="/add" component={studentAdd} />
-        <Route exact path="/student" component={studentsList} />
-        <Route exact path="/:studentid" component={studentData} />
+        <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/`} component={home}/>
+        <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/add`} component={studentAdd} />
+        <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/student`} component={studentsList} />
+        <Route exact path={`${process.env.REACT_APP_GITHUB_REPONAME}/:studentid`} component={studentData} />
         <Route path="*" component={NotFound} /> 
         </Switch>
       </div>
