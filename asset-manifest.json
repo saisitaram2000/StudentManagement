@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/StudentManagement/static/css/main.90700b37.chunk.css",
-    "main.js": "/StudentManagement/static/js/main.ec4958ea.chunk.js",
-    "main.js.map": "/StudentManagement/static/js/main.ec4958ea.chunk.js.map",
+    "main.js": "/StudentManagement/static/js/main.12093f94.chunk.js",
+    "main.js.map": "/StudentManagement/static/js/main.12093f94.chunk.js.map",
     "runtime-main.js": "/StudentManagement/static/js/runtime-main.9c9cda46.js",
     "runtime-main.js.map": "/StudentManagement/static/js/runtime-main.9c9cda46.js.map",
-    "static/js/2.c386e898.chunk.js": "/StudentManagement/static/js/2.c386e898.chunk.js",
-    "static/js/2.c386e898.chunk.js.map": "/StudentManagement/static/js/2.c386e898.chunk.js.map",
+    "static/js/2.a28a9e6f.chunk.js": "/StudentManagement/static/js/2.a28a9e6f.chunk.js",
+    "static/js/2.a28a9e6f.chunk.js.map": "/StudentManagement/static/js/2.a28a9e6f.chunk.js.map",
     "index.html": "/StudentManagement/index.html",
-    "precache-manifest.e094235da8e9f1de0a3c4c2cc32e1a4e.js": "/StudentManagement/precache-manifest.e094235da8e9f1de0a3c4c2cc32e1a4e.js",
+    "precache-manifest.e6618a4786d1b629c2b6dbe75470bbbc.js": "/StudentManagement/precache-manifest.e6618a4786d1b629c2b6dbe75470bbbc.js",
     "service-worker.js": "/StudentManagement/service-worker.js",
     "static/css/main.90700b37.chunk.css.map": "/StudentManagement/static/css/main.90700b37.chunk.css.map",
-    "static/js/2.c386e898.chunk.js.LICENSE.txt": "/StudentManagement/static/js/2.c386e898.chunk.js.LICENSE.txt"
+    "static/js/2.a28a9e6f.chunk.js.LICENSE.txt": "/StudentManagement/static/js/2.a28a9e6f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9c9cda46.js",
-    "static/js/2.c386e898.chunk.js",
+    "static/js/2.a28a9e6f.chunk.js",
     "static/css/main.90700b37.chunk.css",
-    "static/js/main.ec4958ea.chunk.js"
+    "static/js/main.12093f94.chunk.js"
   ]
 }
