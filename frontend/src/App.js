@@ -10,10 +10,12 @@ import NotFound from './student/404';
 
 function App() {
   console.log(process.env.REACT_APP_GITHUB_REPONAME);
+  console.log(window.location.pathname);
+  console.log(`${process.env.REACT_APP_GITHUB_REPONAME}/student`)
   return (
     <Router>
       <div>
-      <h1>STUDENT DATA MANAGEMENT SYSTEMS</h1>
+      <h1>STUDENT DATA MANAGEMENT SYSTEM</h1>
         <ul>
           <li>
             <Link to={`${process.env.REACT_APP_GITHUB_REPONAME}/`}>Home</Link>
