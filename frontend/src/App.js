@@ -15,21 +15,21 @@ function App() {
       <h1>STUDENT DATA MANAGEMENT SYSTEM</h1>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="">Home</Link>
           </li>
           <li>
-            <Link to="/add">AddStudent</Link>
+            <Link to="add">AddStudent</Link>
           </li>
           <li>
-            <Link to="/student">List all Students</Link>
+            <Link to="student">List all Students</Link>
           </li>
         </ul>
         <hr />
         <Switch>
-        <Route exact path="/" component={home}/>
-        <Route exact path="/add" component={studentAdd} />
-        <Route exact path="/student" component={studentsList} />
-        <Route exact path="/:studentid" component={studentData} />
+        <Route exact path="" component={home}/>
+        <Route exact path="add" component={studentAdd} />
+        <Route exact path="student" component={studentsList} />
+        <Route exact path=":studentid" component={studentData} />
         <Route path="*" component={NotFound} /> 
         </Switch>
       </div>
